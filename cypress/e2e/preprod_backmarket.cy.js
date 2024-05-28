@@ -18,7 +18,7 @@ describe("Premier test", () => {
             cy.get('[data-qa="signin-submit-button"]').click();
             }) 
 
-        it.only("lemail est bon mais le mot de passe il est vide ",() => {
+        it("lemail est bon mais le mot de passe il est vide ",() => {
             cy.visit("https://preprod.backmarket.fr/fr-fr/register/");
             cy.get('#signin-email').type("hanae2024@gmail.com");
             cy.get('signin-password').type('hAnae123456');
@@ -26,7 +26,7 @@ describe("Premier test", () => {
             cy.get(' .erreur').should('contain.text','Le champ mot de passe est obligatoire.')
         })
 
-        it.only("lemail est vide ",() => {
+        it("lemail est vide ",() => {
             cy.visit("https://preprod.backmarket.fr/fr-fr/register/");
             cy.get('#signin-email').type(' ');
             cy.get('signin-password').type('hAnae123456');
